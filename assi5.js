@@ -64,7 +64,7 @@ $('.col-lg-8').each(function (index) {
     if (timeBlockHour<hourNow){
         console.log("index: "+index);
         console.log('past,grey');
-        $('.col-lg-8').addClass(".greyColor");
+        timeArray[i].addClass("greyColor");
         console.log(timeBlockHour);
        
     }
@@ -72,7 +72,7 @@ $('.col-lg-8').each(function (index) {
     else if (timeBlockHour===hourNow){
         console.log("index: "+index);
         console.log('now,red');
-        $('.col-lg-8').addClass(".red");
+        timeArray[i].addClass("red");
         console.log(timeBlockHour);
        
     }
@@ -80,7 +80,7 @@ $('.col-lg-8').each(function (index) {
     else if(timeBlockHour>hourNow){
         console.log("index: "+index);
         console.log('future,green');
-        $('.col-lg-8').addClass("green");
+        timeArray[i].addClass("green");
         console.log(timeBlockHour);
         }
     }}
