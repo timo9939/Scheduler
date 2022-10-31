@@ -70,3 +70,18 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
+.classBtn{
+  background-color: #5cbdf5;
+}
+
+.greyColor{
+  background-color: rgba(152, 152, 152, 0.367);
+}
+
+.redColor{
+  background-color: #ff6961;
+}
+
+.greenColor{
+  background-color: #77dd77;
+}
