@@ -27,6 +27,10 @@ let t5=$('#5');
 let t6=$('#6');
 let t7=$('#7');
 let t8=$('#8');
+//const blockInput = $(".col-lg-8")
+
+$(".blockInput").css("background-color","grey");
+
 //Display day
 $('#timeDay').text(day.format("dddd"));
 //Display Date and Time
@@ -50,41 +54,45 @@ $('.col-lg-8').each(function (index) {
     // this is a string so convert to a number before you compare it
     let timeBlockHour =$(this).attr('id');
 
-    console.log("!!! Type is "+typeof timeBlockHou);
+    console.log("!!! Type is "+typeof (timeBlockHour));
 
     console.log("timeBlockHour: "+timeBlockHour);                                                         
     // Determine the schedule time is greater, equal or smaller than current time
-    for(i=0; i<=24; i++){
+    for(i=9; i<=24; i++){
+        
     //Determine grey color   
     if (timeBlockHour<hourNow){
-        console.log("index: "+index)
+        console.log("index: "+index);
         console.log('past,grey');
-        timeArray[i].addClass('greyColor');
+        $('.col-lg-8').addClass(".greyColor");
         console.log(timeBlockHour);
        
     }
     //Determine red color
     else if (timeBlockHour===hourNow){
-        console.log("index: "+index)
+        console.log("index: "+index);
         console.log('now,red');
-        timeArray[i].addClass('redColor')
+        $('.col-lg-8').addClass(".red");
         console.log(timeBlockHour);
        
     }
     //Determine green color
     else if(timeBlockHour>hourNow){
-        console.log("index: "+index)
+        console.log("index: "+index);
         console.log('future,green');
-        timeArray[i].addClass('greemColor')
+        $('.col-lg-8').addClass("green");
         console.log(timeBlockHour);
-        
-         }
-    }
-    )
+        }
+    }}
+    ) 
+    
+
+    let l1=localStorage.setItem(JSON.stringify('storageT9'),t9);
+    console.log("l1: "+l1)
 
 
-//console.log(timeDisplay);
-/*
+/*console.log(timeDisplay);
+
 btnEl.onclick=function(){
     const key=id.value
     console.log(id)
